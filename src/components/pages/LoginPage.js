@@ -37,6 +37,7 @@ function Login() {
           localStorage.setItem("token", data.token);
           localStorage.setItem("username", formData.username); // Store username
           localStorage.setItem("clientName", data.user.clientName); // Store client name
+          localStorage.setItem("id", data.user.id);
           Swal.fire({
             icon: "success",
             title: "Login Successful!",

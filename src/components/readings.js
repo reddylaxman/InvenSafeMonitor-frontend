@@ -74,31 +74,33 @@ const ReadingsList = () => {
   }
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-lg font-semibold mb-4">Latest Reading</h2>
-      {latestReading ? ( // Display the latest reading
-        <div className="mb-6 p-4 border rounded-md shadow">
-          <h3 className="font-semibold">Latest Reading</h3>
-          <p>
-            <strong>Sensor ID:</strong> {latestReading.sensorId}
-          </p>
-          <p>
-            <strong>Sensor Name:</strong> {latestReading.sensorName}
-          </p>
-          <p>
-            <strong>Temperature:</strong> {latestReading.temperature} °C
-          </p>
-          <p>
-            <strong>Humidity:</strong> {latestReading.humidity} %
-          </p>
-          <p>
-            <strong>Timestamp:</strong>{" "}
-            {new Date(latestReading.timestamp).toLocaleString()}
-          </p>
-        </div>
-      ) : (
-        <p>No readings found.</p>
-      )}
+    <div>
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-lg font-semibold mb-4">Readings</h2>
+        {latestReading ? ( // Display the latest reading
+          <div className="mb-6 p-4 border rounded-md shadow">
+            <h3 className="font-semibold">Latest Reading</h3>
+            <p>
+              <strong>Sensor ID:</strong> {latestReading.sensorId}
+            </p>
+            <p>
+              <strong>Sensor Name:</strong> {latestReading.sensorName}
+            </p>
+            <p>
+              <strong>Temperature:</strong> {latestReading.temperature} °C
+            </p>
+            <p>
+              <strong>Humidity:</strong> {latestReading.humidity} %
+            </p>
+            <p>
+              <strong>Timestamp:</strong>{" "}
+              {new Date(latestReading.timestamp).toLocaleString()}
+            </p>
+          </div>
+        ) : (
+          <p>No readings found.</p>
+        )}
+      </div>
     </div>
   );
 };

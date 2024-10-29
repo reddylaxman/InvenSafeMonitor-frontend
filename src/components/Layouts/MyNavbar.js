@@ -18,7 +18,9 @@ const MyNavbar = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         localStorage.removeItem("token");
+        localStorage.removeItem("username");
         localStorage.removeItem("clientName");
+        localStorage.removeItem("id");
         navigate("/");
         setTimeout(() => {
           window.location.reload();

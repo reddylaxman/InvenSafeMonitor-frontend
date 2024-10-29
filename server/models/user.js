@@ -5,6 +5,15 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
   phoneNumber: {
     type: String,
     required: true,
@@ -31,16 +40,12 @@ const userSchema = new mongoose.Schema({
   ],
   inventoryType: {
     type: String,
-    required: true,
+    default: null,
   },
-  inventoryItems: [
-    {
-      itemName: {
-        type: String,
-        required: true,
-      },
-    },
-  ],
+  inventoryItem: {
+    type: String,
+    default: null,
+  },
   isAnomalyDetected: {
     type: Boolean,
     default: false,
